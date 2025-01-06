@@ -1,7 +1,7 @@
 const Home = () => {
   return (
-    <div className="text-5xl text-center text-red-300">
-      <button className="btn btn-primary">Add to cart</button>
+    <div className="">
+      <h2>This is Home</h2>
     </div>
   );
 };
