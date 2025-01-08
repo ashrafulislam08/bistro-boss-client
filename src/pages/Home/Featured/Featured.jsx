@@ -1,5 +1,5 @@
-import SectionTitle from "../../../SectionTitle/SectionTitle";
 import featuredImg from "../../../assets/home/featured.jpg";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import "./Featured.css";
 const Featured = () => {
   return (
@@ -20,7 +20,9 @@ const Featured = () => {
             odio asperiores, ipsum laudantium facilis qui ad ducimus labore,
             animi officiis rerum soluta dignissimos nemo enim!
           </p>
-          <button className="btn btn-outline border-0 border-b-4 mt-4"></button>
+          <button className="btn btn-outline border-0 border-b-4 mt-4 text-white">
+            Read More
+          </button>
         </div>
       </div>
     </div>
