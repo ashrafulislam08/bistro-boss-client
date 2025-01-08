@@ -1,7 +1,7 @@
 const MenuItem = ({ item }) => {
   const { name, image, price, recipe } = item;
   return (
-    <div>
+    <div className="flex gap-4 mb-10">
       <img
         src={image}
         style={{ borderRadius: "0 200px 200px 200px" }}
