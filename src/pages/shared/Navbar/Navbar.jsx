@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useAuthContext from "../../../hooks/useAuthContext";
 
 const Navbar = () => {
+  const { user } = useAuthContext();
   const navOptions = (
     <>
       <li>
@@ -14,6 +16,9 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/login">Login</Link>
+      </li>
+      <li>
+        <Link to="/signup">Sign Up</Link>
       </li>
     </>
   );
@@ -40,7 +45,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black"
             >
               {navOptions}
             </ul>
@@ -56,7 +61,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">{user?.email}</a>
         </div>
       </div>
     </>
