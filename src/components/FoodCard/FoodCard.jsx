@@ -6,7 +6,7 @@ const FoodCard = ({ item }) => {
       <figure>
         <img src={image} alt="" />
       </figure>
-      <p className="absolute right-0 mr-4 px-4 bg-slate-900 text-white">
+      <p className="absolute right-0 mr-4 mt-4 px-4 py-2 rounded-md bg-slate-900 text-white">
         {price}
       </p>
       <div className="card-body flex flex-col items-center">
@@ -16,6 +16,7 @@ const FoodCard = ({ item }) => {
           <button className="btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4">
             Add to Cart
           </button>
+          0
         </div>
       </div>
     </div>
