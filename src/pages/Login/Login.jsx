@@ -5,13 +5,13 @@ import {
   LoadCanvasTemplateNoReload,
   validateCaptcha,
 } from "react-simple-captcha";
-import useAuthContext from "../../hooks/useAuthContext";
+import useAuth from "../../hooks/useAuth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import authImage from "../../assets/others/authentication2.png";
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
-  const { login } = useAuthContext();
+  const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 

@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import authImage from "../../assets/others/authentication2.png";
 import { Link, useNavigate } from "react-router-dom";
-import useAuthContext from "../../hooks/useAuthContext";
+import useAuth from "../../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
@@ -13,7 +13,7 @@ const SignUp = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const { createUser, updateUserProfile } = useAuthContext();
+  const { createUser, updateUserProfile } = useAuth();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -25,6 +25,7 @@ const SignUp = () => {
           console.log("user profile info updated");
           Swal.fire("User created successfully.");
           reset();
+          navigate("/");
         })
         .catch((error) => {
           console.log(error.message);
