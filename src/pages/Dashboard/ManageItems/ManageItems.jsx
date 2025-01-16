@@ -1,13 +1,12 @@
-import { FaTrashAlt } from "react-icons/fa";
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useMenu from "../../../hooks/useMenu";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 const ManageItems = () => {
-  const handleDeleteItem = () => {
-    const [menu, refetch] = useMenu();
-    const axiosSecure = useAxiosSecure();
-  };
+  const [menu, refetch] = useMenu();
+  const axiosSecure = useAxiosSecure();
+  const handleDeleteItem = () => {};
   return (
     <div>
       <SectionTitle
